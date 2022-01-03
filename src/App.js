@@ -1,25 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 
+import { Profile } from './profile/Profile';
+import Image from './profile/Profyle.jpg'
+const styleObj = {width : '500px',height :'400px',margin:'40px'}
 function App() {
+ const handleName = (user) =>{
+    alert(`this profile user is ${user}`)
+
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={Image} alt ="face" style = {styleObj}/>
+      <Profile fullName = "Cute Puppy" bio ="Friend of msn" profession = "Company" handleName = {handleName} />
+      
+        
+      
     </div>
   );
 }
+
 
 export default App;
